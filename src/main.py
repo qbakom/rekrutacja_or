@@ -1,22 +1,30 @@
 from multiprocessing.sharedctypes import Value
 import requests
 import json
+import time
 
 def validate_JSON(data):
     try:
-        json.load(data)
-    except ValueError as err:
+        json.loads(data)
+    except ValueError as e:
         return False
     return True
 
-response = requests.get("http://api.nbp.pl/api/exchangerates/rates/a/eur/last/100/?format=json")    #1
-print(response.elapsed.total_seconds())     #2
+file = open("log.txt","w")
 
-#3
+for i in range(10):
+    response = requests.get("http://api.nbp.pl/api/exchangerates/rates/a/eur/last/100/?format=json")    #1
+    print(response.elapsed.total_seconds())     #2
+    # file.write(f"{response.elapsed.total_seconds()}\n")
 
-if response.headers.get("content-type") == "application/json":      #4
-    print("it's a json JSON")
-else:
-    print("it's not a JSON")
-    
-print(validate_JSON(response.json()))   #5
+    #3
+
+    if response.headers.get("content-type") == "application/json":      #4
+        print("it's a json JSON")
+        file.write(f"it's a json JSON\n")
+    else:
+        print("it's not a JSON")
+
+    response = response.json()
+    print(validate_JSON(response))   #5
+    time.sleep(5)
