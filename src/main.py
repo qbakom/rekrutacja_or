@@ -68,5 +68,5 @@ for i in range(10):
     time.sleep(5)
 
 print()
-file.write(f"\nZadanie dodatkowe")
+file.write(f"\nZadanie dodatkowe\n")
 dodatkowe() 
