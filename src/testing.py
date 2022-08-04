@@ -4,14 +4,19 @@ import json
 import time
 from datetime import datetime
 
+file = open("log.txt","w")
+
 def dodatkowe():
     response = call_api()
     data = response.json()
     for i in range(100):
+        
         x = data["rates"][i]["mid"]
         date = data["rates"][i]["effectiveDate"]
+        
         if x < 4.5 or x > 4.7:
             print(date)
+            file.write(f"{date}\n")
 
 def validate_json(data):
     try:

@@ -1,1 +1,3 @@
-Uwaga do uruchomienia programu jest potrzebny
+Uwaga do uruchomienia programu potrzebny jest kompilator oraz pakiet języka python
+
+1. 
