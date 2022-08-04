@@ -4,7 +4,6 @@ import json
 import time
 from datetime import datetime
 
-file = open("log.txt","w")
 
 def dodatkowe():
     response = call_api()
@@ -16,7 +15,6 @@ def dodatkowe():
         
         if x < 4.5 or x > 4.7:
             print(date)
-            file.write(f"{date}\n")
 
 def validate_json(data):
     try:
@@ -51,13 +49,17 @@ def print_data():
     data += "status code: " + status_code + ", "
 
     #4
-    data += "content-type: " + str(response.headers["Content-Type"]) + ", "
+    headers = response.headers["Content-Type"]
+    s = headers.find(";")
+    headers = response.headers["Content-Type"][:s]
+    data += "content-type: " + str(headers) + ", "
 
     #5
     data += "JSON is valid:" + str(validate_json(response.content))
     print(data)
 
 for i in range(10):
+    print(i+1, end=" ")
     print_data()
     time.sleep(5)
 
