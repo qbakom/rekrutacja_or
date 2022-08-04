@@ -1,3 +1,14 @@
 Uwaga do uruchomienia programu potrzebny jest kompilator oraz pakiet języka python
 
-1. 
+Uruchamianie poprzez Visual Studio Code:
+ctrl + ~ (otworzenia terminala w vsc)
+Następnie wpisz w terminalu:
+1. cd src
+2. python3 main.py
+
+Uruchamianie poprzez inne środowisko:
+1. Znajdź miejsce w którym zostało pobrane repozytorium
+2. Skopiuj ściężkę do repozytorium
+3. Otwórz powershella
+4. Wpisz cd "ściężka ze schowka"
+5. Wpisz python3 main.py
