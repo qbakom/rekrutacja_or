@@ -1,10 +1,12 @@
+First of all you need to download zip of this repository and upack it
+
 Prerequisites
 1. Python installed (https://www.python.org/downloads/)
 2. Git installed (https://git-scm.com/downloads)
 3. Packages installed (type in PowerShell "pip install requests")
 
 Running through Visual Studio Code:
-Ctrl + ~ (opens terminal in vs code)
+Ctrl + ~ (opens terminal in vscode)
 Type in terminal:
 1. cd src
 2. python3 main.py
