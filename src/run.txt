@@ -1,14 +1,17 @@
-Uwaga do uruchomienia programu potrzebny jest kompilator oraz pakiet języka python
+Prerequisites
+1. Python installed (https://www.python.org/downloads/)
+2. Git installed (https://git-scm.com/downloads)
+3. Packages installed (type in powershell "pip install requests")
 
-Uruchamianie poprzez Visual Studio Code:
-ctrl + ~ (otworzenia terminala w vsc)
-Następnie wpisz w terminalu:
+Running through Visual Studio Code:
+ctrl + ~ (opens terminal in vscode)
+Type in terminal:
 1. cd src
 2. python3 main.py
 
-Uruchamianie poprzez inne środowisko:
-1. Znajdź miejsce w którym zostało pobrane repozytorium
-2. Skopiuj ściężkę do repozytorium
-3. Otwórz powershella
-4. Wpisz cd "ściężka ze schowka"
-5. Wpisz python3 main.py
+Running without Visual Studio Code:
+1. Find path of repository
+2. Copy path to repository
+3. Open powershell
+4. Type cd "path from clipboard"
+5. Type python3 main.py
